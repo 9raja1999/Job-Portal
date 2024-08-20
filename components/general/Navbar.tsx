@@ -54,12 +54,6 @@ const Navbar = () => {
           <Link href='/jobs'>
             <a className={`navbar-link ${pathname === '/jobs' ? 'active' : undefined}`}>Find Jobs</a>
           </Link>
-          {
-            ((auth.user?.role === 'organization') || (auth.user?.role === 'admin')) &&
-            <Link href='/find_candidate'>
-              <a className={`navbar-link ${pathname === '/find_candidate' ? 'active' : undefined}`}>Find Candidates</a>
-            </Link>
-          }
         </div>
         <div className='text-sm flex lg:flex-row flex-col lg:items-center items-start lg:gap-8 gap-4 mt-10 lg:mt-0'>
           {
@@ -107,11 +101,6 @@ const Navbar = () => {
                         <Link href='/organization/jobs'>
                           <a className={`navbar-link ${pathname === '/organization/jobs' ? 'active' : undefined}`}>
                             Jobs Posted
-                          </a>
-                        </Link>
-                        <Link href='/sent_invitation'>
-                          <a className={`navbar-link ${pathname === '/sent_invitation' ? 'active' : undefined}`}>
-                            Sent Invitation
                           </a>
                         </Link>
                       </>
